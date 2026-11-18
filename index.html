@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Les métiers du commerce et de la vente</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@400;600;800&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#fffaf2; --ink:#1b1b1f; --muted:#5b5b66; --line:#e6dccb;
+  --a:#ff5a36; --a-soft:#ffe3da; --b:#2b59ff; --b-soft:#dfe6ff;
+  --ok:#1f9d55; --ok-soft:#dcf5e6; --ko:#c62828; --ko-soft:#fde2e2; --card:#ffffff;
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:Inter,system-ui,sans-serif;font-size:17px;line-height:1.5}
+h1,h2,h3{font-family:"Bricolage Grotesque",Inter,sans-serif;line-height:1.15;margin:0 0 .5em}
+h1{font-size:clamp(2rem,5vw,3.2rem);font-weight:800}
+h2{font-size:clamp(1.5rem,3.5vw,2.1rem);font-weight:800;margin-top:.2em}
+h3{font-size:1.2rem;font-weight:600}
+a{color:var(--b)}
+.wrap{max-width:980px;margin:0 auto;padding:0 20px}
+header{background:var(--ink);color:#fff;padding:48px 0 40px}
+header p{color:#d8d8e0;max-width:640px;margin:0}
+.tag{display:inline-block;background:var(--a);color:#fff;font-weight:600;font-size:.85rem;padding:4px 12px;border-radius:999px;margin-bottom:14px}
+nav{position:sticky;top:0;z-index:5;background:var(--bg);border-bottom:2px solid var(--line)}
+nav .wrap{display:flex;gap:8px;overflow-x:auto;padding:10px 20px}
+nav a{white-space:nowrap;text-decoration:none;color:var(--ink);font-weight:600;font-size:.9rem;padding:6px 12px;border-radius:999px;background:#fff;border:1px solid var(--line)}
+nav a:hover{background:var(--ink);color:#fff}
+section{padding:44px 0;border-bottom:2px dashed var(--line)}
+.lead{color:var(--muted);max-width:700px}
+.grid{display:grid;gap:16px}
+@media(min-width:720px){.g2{grid-template-columns:1fr 1fr}.g3{grid-template-columns:repeat(3,1fr)}}
+.card{background:var(--card);border:2px solid var(--line);border-radius:16px;padding:20px}
+.card.a{border-color:var(--a);background:var(--a-soft)}
+.card.b{border-color:var(--b);background:var(--b-soft)}
+.pill{display:inline-block;font-size:.8rem;font-weight:600;padding:2px 10px;border-radius:999px;background:var(--ink);color:#fff;margin:0 4px 6px 0}
+.pill.a{background:var(--a)} .pill.b{background:var(--b)}
+ul.clean{padding-left:1.1em;margin:.4em 0}
+button{font:inherit;font-weight:600;cursor:pointer;border:none;border-radius:12px;padding:10px 18px;background:var(--ink);color:#fff}
+button.ghost{background:#fff;color:var(--ink);border:2px solid var(--ink)}
+button:hover{opacity:.88}
+.vf{display:flex;flex-direction:column;gap:12px}
+.vf .card{display:flex;flex-direction:column;gap:10px}
+.vf .btns{display:flex;gap:8px}
+.fb{display:none;border-radius:10px;padding:10px 14px;font-size:.95rem}
+.fb.show{display:block}
+.fb.ok{background:var(--ok-soft);color:#11502c}
+.fb.ko{background:var(--ko-soft);color:#7a1717}
+.fb.info{background:#f1eee8;color:var(--ink)}
+.mission{border-left:8px solid var(--b)}
+.mission .meta{font-size:.85rem;color:var(--muted);margin-bottom:6px}
+.box{background:#f7f3ec;border-radius:12px;padding:12px 16px;margin:10px 0;font-size:.95rem}
+table{border-collapse:collapse;width:100%;font-size:.92rem;background:#fff}
+th,td{border:1px solid var(--line);padding:7px 8px;text-align:left}
+th{background:#f1eee8}
+td input{transform:scale(1.3)}
+.opts{display:flex;flex-direction:column;gap:8px;margin:10px 0}
+.opts label{display:flex;gap:10px;align-items:flex-start;background:#fff;border:2px solid var(--line);border-radius:10px;padding:8px 12px;cursor:pointer}
+.opts label:hover{border-color:var(--ink)}
+.opts input{margin-top:5px;transform:scale(1.2)}
+.path{display:flex;flex-wrap:wrap;align-items:stretch;gap:10px}
+.step{flex:1 1 200px;background:#fff;border:2px solid var(--ink);border-radius:14px;padding:14px}
+.step b{font-family:"Bricolage Grotesque",sans-serif;font-size:1.15rem}
+.arrow{align-self:center;font-size:1.6rem;font-weight:800}
+.big{font-family:"Bricolage Grotesque",sans-serif;font-size:2.4rem;font-weight:800;color:var(--a)}
+textarea,input[type=text]{font:inherit;width:100%;border:2px solid var(--line);border-radius:10px;padding:8px 10px;background:#fff}
+textarea:focus,input[type=text]:focus{outline:none;border-color:var(--b)}
+.row3{display:grid;gap:10px}
+@media(min-width:720px){.row3{grid-template-columns:1fr 1fr 2fr}}
+.result{font-weight:600;font-size:1.1rem}
+.sources li{margin-bottom:6px;font-size:.92rem}
+footer{padding:30px 0 50px;color:var(--muted);font-size:.85rem}
+.copied{color:var(--ok);font-weight:600;margin-left:10px}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <span class="tag">3e prépa-métiers · découverte pro</span>
+    <h1>Les métiers du commerce et de la vente</h1>
+    <p>Vendre, ce n'est pas seulement tenir une caisse. Dans cette page, tu vas découvrir les deux grandes familles de métiers, tester de vraies missions tirées du bac pro et repérer où tu pourrais faire ton stage.</p>
+  </div>
+</header>
+
+<nav><div class="wrap">
+  <a href="#idees">1. Idées reçues</a>
+  <a href="#familles">2. Deux familles</a>
+  <a href="#missions">3. Missions du bac</a>
+  <a href="#parcours">4. Le parcours</a>
+  <a href="#profil">5. Ton profil</a>
+  <a href="#stage">6. Ton stage</a>
+  <a href="#sources">Sources</a>
+</div></nav>
+
+<!-- 1. IDÉES REÇUES -->
+<section id="idees"><div class="wrap">
+  <h2>1. Vrai ou faux&nbsp;?</h2>
+  <p class="lead">Clique sur ta réponse. Pas de note, juste pour voir ce que tu sais déjà.</p>
+  <div class="vf" id="vf"></div>
+</div></section>
+
+<!-- 2. FAMILLES -->
+<section id="familles"><div class="wrap">
+  <h2>2. Deux familles de métiers</h2>
+  <p class="lead">Le bac pro métiers du commerce et de la vente (MCV) a deux options. Elles correspondent à deux façons de travailler.</p>
+  <div class="grid g2">
+    <div class="card a">
+      <span class="pill a">Option A</span>
+      <h3>Le client vient à toi</h3>
+      <p>Tu travailles dans un magasin&nbsp;: tu ranges et mets en valeur les produits, tu accueilles, tu conseilles, tu encaisses, tu animes le rayon.</p>
+      <b>Exemples de métiers</b>
+      <ul class="clean">
+        <li>employé·e de commerce, équipier·e de vente</li>
+        <li>vendeur·se en magasin (sport, mode, high-tech, bricolage…)</li>
+        <li>caissier·e, employé·e de rayon</li>
+        <li>plus tard&nbsp;: chef·fe de rayon, responsable de magasin</li>
+      </ul>
+      <b>Où&nbsp;?</b> supermarchés, grandes surfaces spécialisées, boutiques.
+    </div>
+    <div class="card b">
+      <span class="pill b">Option B</span>
+      <h3>Tu vas chercher le client</h3>
+      <p>Tu trouves de nouveaux clients (au téléphone, par mail, sur les réseaux, sur des salons), tu prends des rendez-vous, tu présentes une offre et tu suis les résultats.</p>
+      <b>Exemples de métiers</b>
+      <ul class="clean">
+        <li>commercial·e, représentant·e commercial·e</li>
+        <li>conseiller·e de vente, conseiller·e clientèle à distance</li>
+        <li>vendeur·se en concession auto, en agence</li>
+        <li>plus tard&nbsp;: responsable des ventes, responsable de secteur</li>
+      </ul>
+      <b>Où&nbsp;?</b> banques, assurances, concessions, agences, entreprises qui vendent à d'autres entreprises.
+    </div>
+  </div>
+  <div class="box" style="margin-top:16px">💡 Le choix entre A et B se fait plus tard, en lycée pro. En 2de, on entre dans une classe commune appelée <b>2de pro métiers de la relation client</b>.</div>
+</div></section>
+
+<!-- 3. MISSIONS -->
+<section id="missions"><div class="wrap">
+  <h2>3. De vraies missions tirées du bac</h2>
+  <p class="lead">Ces 4 situations viennent des sujets d'examen du bac pro MCV (option B). Des élèves de terminale les ont eues le jour du bac. Tu peux déjà en résoudre une partie.</p>
+
+  <div class="grid">
+
+    <!-- Bol d'air -->
+    <div class="card mission">
+      <div class="meta">Sujet bac 2026 · Bol d'air · La Bresse (Vosges)</div>
+      <h3>🌲 Vendre des séminaires dans un parc de loisirs</h3>
+      <p>Bol d'air propose accrobranche, tyrolienne et randonnées. Le patron veut attirer des <b>entreprises</b> qui viendraient faire des réunions et des activités d'équipe. Le commercial a appelé des entreprises de la région pour décrocher des rendez-vous.</p>
+      <div class="box">📞 73 entreprises appelées · 10 rendez-vous obtenus · objectif du patron&nbsp;: 15&nbsp;% de rendez-vous.</div>
+      <p><b>Question 1.</b> L'objectif est-il atteint&nbsp;?</p>
+      <div class="opts" data-q="bol1">
+        <label><input type="radio" name="bol1" value="oui"> oui</label>
+        <label><input type="radio" name="bol1" value="non"> non</label>
+      </div>
+      <button onclick="check('bol1','non','Exact. 10 ÷ 73 = 0,137, soit environ 13,7 %. C\'est un peu en dessous des 15 %. Il aurait fallu 11 rendez-vous.','Pas tout à fait. Calcule 10 ÷ 73 : ça donne environ 13,7 %, donc moins que 15 %.')">Vérifier</button>
+      <div class="fb" id="fb-bol1"></div>
+
+      <p style="margin-top:18px"><b>Question 2.</b> Le patron organise une journée découverte le <b>vendredi 4 décembre</b>. Le repas ne doit pas dépasser <b>20&nbsp;€ par personne</b>. Lequel choisis-tu&nbsp;?</p>
+      <div class="opts" data-q="bol2">
+        <label><input type="radio" name="bol2" value="traiteur"> traiteur (raclette, buffet)&nbsp;: environ 24&nbsp;€</label>
+        <label><input type="radio" name="bol2" value="foodtruck"> food truck burgers&nbsp;: environ 15&nbsp;€, ouvert de mai à octobre</label>
+        <label><input type="radio" name="bol2" value="snack"> snack du parc&nbsp;: environ 18&nbsp;€, ouvert toute la journée</label>
+        <label><input type="radio" name="bol2" value="auberge"> auberge en ville&nbsp;: à partir de 21&nbsp;€</label>
+      </div>
+      <button onclick="check('bol2','snack','Bien vu. Le food truck est moins cher mais il est fermé en décembre. Le snack respecte le budget et la saison.','Regarde bien deux choses : le prix (20 € max) et la date (décembre). Une seule option respecte les deux.')">Vérifier</button>
+      <div class="fb" id="fb-bol2"></div>
+    </div>
+
+    <!-- Happy Gifts -->
+    <div class="card mission">
+      <div class="meta">Sujet bac 2025 · Happy Gifts · Tremblay-en-France (93)</div>
+      <h3>🎁 Inviter les bons clients sur un salon</h3>
+      <p>Happy Gifts vend des objets publicitaires (goodies, cartes de visite connectées…) à d'autres entreprises. La commerciale doit inviter des clients au salon Heavent, à Paris. La patronne donne 3 règles&nbsp;:</p>
+      <div class="box">✅ dernier achat <b>après janvier 2022</b><br>✅ au moins <b>2&nbsp;000&nbsp;€</b> d'achats en 2024<br>✅ entreprise située en <b>Île-de-France</b> (75, 77, 78, 91, 92, 93, 94, 95)</div>
+      <p><b>Coche les clients à inviter.</b></p>
+      <div style="overflow-x:auto">
+      <table id="hg">
+        <tr><th></th><th>Client</th><th>Ville</th><th>Dernier achat</th><th>Achats 2024</th></tr>
+        <tr><td><input type="checkbox" value="pichon"></td><td>SA Pichon</td><td>Gennevilliers (92)</td><td>juin 2023</td><td>7&nbsp;500&nbsp;€</td></tr>
+        <tr><td><input type="checkbox" value="leduc"></td><td>SARL Leduc</td><td>Tours (37)</td><td>déc. 2023</td><td>3&nbsp;600&nbsp;€</td></tr>
+        <tr><td><input type="checkbox" value="odon"></td><td>SA Odon</td><td>Tourcoing (59)</td><td>oct. 2022</td><td>0&nbsp;€</td></tr>
+        <tr><td><input type="checkbox" value="lalande"></td><td>Ets Lalande</td><td>Bois-Colombes (92)</td><td>janv. 2024</td><td>2&nbsp;500&nbsp;€</td></tr>
+        <tr><td><input type="checkbox" value="salem"></td><td>EURL Salem</td><td>Melun (77)</td><td>juin 2024</td><td>1&nbsp;450&nbsp;€</td></tr>
+        <tr><td><input type="checkbox" value="ozprod"></td><td>SAS Ozprod</td><td>Nanterre (92)</td><td>sept. 2024</td><td>6&nbsp;050&nbsp;€</td></tr>
+        <tr><td><input type="checkbox" value="connoir"></td><td>SARL Connoir</td><td>Paris (75)</td><td>avril 2021</td><td>800&nbsp;€</td></tr>
+        <tr><td><input type="checkbox" value="dimaggio"></td><td>SARL Dimaggio</td><td>Saint-Denis (93)</td><td>janv. 2024</td><td>1&nbsp;750&nbsp;€</td></tr>
+        <tr><td><input type="checkbox" value="damestoi"></td><td>EURL Damestoi</td><td>Épinay-sur-Seine (93)</td><td>juil. 2022</td><td>250&nbsp;€</td></tr>
+        <tr><td><input type="checkbox" value="labatte"></td><td>SA Labatte</td><td>Compiègne (60)</td><td>déc. 2022</td><td>2&nbsp;450&nbsp;€</td></tr>
+      </table>
+      </div>
+      <p><button onclick="checkHG()">Vérifier</button></p>
+      <div class="fb" id="fb-hg"></div>
+    </div>
+
+    <!-- E-Drag'on -->
+    <div class="card mission">
+      <div class="meta">Sujet bac 2024 · E-Drag'on · Calais (62)</div>
+      <h3>🚲 Un stand plein… et zéro vente</h3>
+      <p>E-Drag'on vend des vélos électriques. L'entreprise a tenu un stand pendant l'Enduropale, une grosse course de motos sur la plage du Touquet, pour faire essayer des <b>fat bikes</b> (vélos à grosses roues).</p>
+      <div style="overflow-x:auto">
+      <table>
+        <tr><th>Ce qu'on mesure</th><th>Objectif</th><th>Résultat</th></tr>
+        <tr><td>visiteurs sur le stand</td><td>2&nbsp;000</td><td><b>4&nbsp;032</b></td></tr>
+        <tr><td>rendez-vous pris pour plus tard</td><td>150</td><td><b>210</b></td></tr>
+        <tr><td>fat bikes vendus sur le stand</td><td>8</td><td><b>0</b></td></tr>
+        <tr><td>accessoires vendus</td><td>50</td><td><b>2</b></td></tr>
+      </table>
+      </div>
+      <p><b>Que faut-il retenir&nbsp;?</b></p>
+      <div class="opts">
+        <label><input type="radio" name="edr" value="rate"> l'opération est ratée, il ne faut plus y aller</label>
+        <label><input type="radio" name="edr" value="suivi"> les gens sont intéressés mais n'achètent pas sur place&nbsp;: le travail continue après, en rappelant les 210 rendez-vous</label>
+        <label><input type="radio" name="edr" value="prix"> il suffit de baisser les prix de moitié</label>
+      </div>
+      <button onclick="check('edr','suivi','Oui. Un vélo à 2 500 € ne s\'achète pas sur un coup de tête au bord d\'une course. Le stand a créé beaucoup de contacts : le métier de commercial, c\'est aussi le suivi après l\'événement.','Regarde les deux premières lignes : il y a eu deux fois plus de visiteurs que prévu et plus de rendez-vous que l\'objectif. Le stand a donc servi à quelque chose.')">Vérifier</button>
+      <div class="fb" id="fb-edr"></div>
+    </div>
+
+    <!-- Biscuiterie -->
+    <div class="card mission">
+      <div class="meta">Sujet bac 2024 · Biscuiterie de l'Abbaye · Lonlay-l'Abbaye (61)</div>
+      <h3>🍪 Préparer le flyer des portes ouvertes</h3>
+      <p>Cette biscuiterie normande fabrique des sablés depuis plus d'un siècle. Elle organise deux journées portes ouvertes avec visite des ateliers et dégustation. Le commercial doit préparer un flyer (prospectus). La loi impose certaines mentions.</p>
+      <p><b>Coche les mentions obligatoires.</b></p>
+      <div class="opts" id="flyer">
+        <label><input type="checkbox" value="imprimeur"> le nom et la ville de l'imprimeur («&nbsp;<i>Imprimé par…</i>&nbsp;»)</label>
+        <label><input type="checkbox" value="voie"> «&nbsp;<i>Ne pas jeter sur la voie publique</i>&nbsp;»</label>
+        <label><input type="checkbox" value="photo"> une photo du patron</label>
+        <label><input type="checkbox" value="francais"> un texte écrit en français</label>
+        <label><input type="checkbox" value="sante"> une phrase santé, par exemple «&nbsp;<i>Pour votre santé, mangez au moins cinq fruits et légumes par jour</i>&nbsp;»</label>
+        <label><input type="checkbox" value="prix"> le prix de chaque biscuit</label>
+      </div>
+      <button onclick="checkFlyer()">Vérifier</button>
+      <div class="fb" id="fb-flyer"></div>
+    </div>
+
+  </div>
+</div></section>
+
+<!-- 4. PARCOURS -->
+<section id="parcours"><div class="wrap">
+  <h2>4. Le parcours après la 3e</h2>
+  <p class="lead">Deux portes d'entrée après la 3e. Les deux se font en lycée pro ou en apprentissage (CFA).</p>
+  <div class="path">
+    <div class="step"><span class="pill">2 ans</span><br><b>CAP équipier polyvalent du commerce</b><br>mise en rayon, caisse, accueil et conseil du client.</div>
+    <div class="arrow">→</div>
+    <div class="step"><span class="pill">2 ans après un CAP<br>3 ans après la 3e</span><br><b>Bac pro MCV</b><br>2de pro métiers de la relation client, puis option A ou option B.</div>
+    <div class="arrow">→</div>
+    <div class="step"><span class="pill">2 ans</span><br><b>BTS</b> (par exemple dans le commerce ou la vente)<br>pour aller vers des postes de responsable.</div>
+  </div>
+  <div class="grid g3" style="margin-top:18px">
+    <div class="card"><div class="big">1&nbsp;867&nbsp;€</div>brut par mois&nbsp;: salaire de départ indiqué par l'Onisep pour un vendeur ou une vendeuse en magasin (hors primes).</div>
+    <div class="card"><div class="big">0</div>expérience exigée&nbsp;: d'après l'Onisep, le métier de vendeur est ouvert aux jeunes sans expérience.</div>
+    <div class="card"><div class="big">⚠️</div>à savoir&nbsp;: travail le week-end, heures en plus pendant les soldes et les fêtes, beaucoup de temps debout.</div>
+  </div>
+</div></section>
+
+<!-- 5. PROFIL -->
+<section id="profil"><div class="wrap">
+  <h2>5. Plutôt A ou plutôt B&nbsp;?</h2>
+  <p class="lead">4 questions rapides. Il n'y a pas de bonne réponse, c'est juste une piste.</p>
+  <div class="grid" id="quiz"></div>
+  <p><button onclick="profil()">Voir mon résultat</button></p>
+  <div class="fb info" id="fb-profil"></div>
+</div></section>
+
+<!-- 6. STAGE -->
+<section id="stage"><div class="wrap">
+  <h2>6. Et pour ton stage&nbsp;?</h2>
+  <p class="lead">Repère 3 entreprises près de chez toi ou du collège où tu pourrais observer un métier du commerce. Pense large&nbsp;: supermarché, magasin de sport, boulangerie, concession auto, agence bancaire, boutique de téléphonie…</p>
+  <div class="grid" id="stages"></div>
+  <p style="margin-top:14px"><b>Pour aller plus loin&nbsp;:</b> quelle question aimerais-tu poser à un vendeur ou à une commerciale pendant ton stage&nbsp;?</p>
+  <textarea id="qstage" rows="2" placeholder="ma question…"></textarea>
+  <p><button onclick="copyAll()">Copier mes réponses</button><span class="copied" id="copied"></span></p>
+  <p class="lead" style="font-size:.9rem">Colle ensuite tes réponses dans ton document ou envoie-les à ton professeur. Rien n'est enregistré sur cette page.</p>
+</div></section>
+
+<!-- SOURCES -->
+<section id="sources"><div class="wrap">
+  <h2>Sources</h2>
+  <ul class="sources">
+    <li>Ministère de l'Éducation nationale, bac pro métiers du commerce et de la vente option B, épreuve E2 «&nbsp;<i>analyse et résolution de situations professionnelles</i>&nbsp;»&nbsp;: sujet <b>Bol d'air</b>, session 2026&nbsp;; sujet <b>Happy Gifts</b>, session 2025&nbsp;; sujets <b>E-Drag'on</b> et <b>Biscuiterie de l'Abbaye</b>, session 2024. Données simplifiées pour des élèves de 3e.</li>
+    <li>Onisep, fiche formation <a href="https://www.onisep.fr/ressources/univers-formation/formations/lycees/bac-pro-metiers-du-commerce-et-de-la-vente-option-a-animation-et-gestion-de-l-espace-commercial" target="_blank" rel="noopener">bac pro MCV option A</a>.</li>
+    <li>Onisep, fiche formation <a href="https://www.onisep.fr/Ressources/Univers-Formation/Formations/Lycees/Bac-pro-Metiers-du-commerce-et-de-la-vente-option-B-prospection-clientele-et-valorisation-de-l-offre-commerciale" target="_blank" rel="noopener">bac pro MCV option B</a>.</li>
+    <li>Onisep, fiche formation <a href="https://www.onisep.fr/ressources/univers-formation/Formations/Lycees/cap-equipier-polyvalent-du-commerce" target="_blank" rel="noopener">CAP équipier polyvalent du commerce</a>.</li>
+    <li>Onisep, fiche métier <a href="https://www.onisep.fr/ressources/univers-metier/metiers/vendeur-vendeuse-en-magasin" target="_blank" rel="noopener">vendeur / vendeuse en magasin</a> (salaire, conditions de travail, accès sans expérience).</li>
+    <li>Onisep, fiche métier <a href="https://www.onisep.fr/ressources/univers-metier/metiers/commercial-commerciale-sedentaire" target="_blank" rel="noopener">commercial / commerciale sédentaire</a>.</li>
+    <li>Académie de Bordeaux, <a href="https://ent2d.ac-bordeaux.fr/disciplines/commerce-vente/apprendre-la-vente-laccueil-et-le-commerce-dans-lacademie-de-bordeaux/les-formations-professionnelles-de-niveau-iv-et-v-en-vente-commerce-sur-lacademie-de-bordeaux/" target="_blank" rel="noopener">les formations professionnelles en vente et commerce</a> (différence entre options A et B).</li>
+    <li>Lycée Isnelle Amelin (académie de La Réunion), <a href="https://etab.ac-reunion.fr/lyc-isnelle-amelin/wp-content/uploads/sites/43/2020/10/Plaquette-Bac-Pro-Metier-commerce-et-de-la-vente.pdf" target="_blank" rel="noopener">plaquette bac pro MCV</a> (métiers et secteurs par option).</li>
+  </ul>
+</div></section>
+
+<footer><div class="wrap">Page conçue pour la 3e prépa-métiers · découverte professionnelle.</div></footer>
+
+<script>
+/* ---------- 1. vrai / faux ---------- */
+const vf = [
+  {q:"Dans le commerce, on passe toute sa journée à la caisse.", a:false,
+   e:"Faux. Il y a aussi la mise en rayon, le conseil, les commandes, la vitrine… et des métiers où l'on ne voit jamais de caisse, comme commercial."},
+  {q:"On peut vendre à des entreprises et pas seulement à des particuliers.", a:true,
+   e:"Vrai. Dans les sujets du bac, on vend des séminaires, des objets publicitaires ou des biscuits à des magasins : ce sont des entreprises qui achètent."},
+  {q:"Les commerciaux utilisent les réseaux sociaux pour trouver des clients.", a:true,
+   e:"Vrai. Dans le sujet Happy Gifts, la commerciale prospecte sur LinkedIn et prépare une publication Instagram."},
+  {q:"Il faut forcément un bac pour travailler dans la vente.", a:false,
+   e:"Faux. Le CAP équipier polyvalent du commerce permet de travailler en magasin après 2 ans."}
+];
+const vfBox = document.getElementById('vf');
+vf.forEach((it,i)=>{
+  const c=document.createElement('div'); c.className='card';
+  c.innerHTML=`<div><b>${i+1}.</b> ${it.q}</div>
+    <div class="btns"><button class="ghost" data-v="1">vrai</button><button class="ghost" data-v="0">faux</button></div>
+    <div class="fb"></div>`;
+  const fb=c.querySelector('.fb');
+  c.querySelectorAll('button').forEach(b=>b.onclick=()=>{
+    const ok=(b.dataset.v==='1')===it.a;
+    fb.className='fb show '+(ok?'ok':'ko');
+    fb.textContent=(ok?'👍 ':'👀 ')+it.e;
+  });
+  vfBox.appendChild(c);
+});
+
+/* ---------- réponses uniques ---------- */
+function check(name, good, okMsg, koMsg){
+  const sel=document.querySelector(`input[name="${name}"]:checked`);
+  const fb=document.getElementById('fb-'+name);
+  if(!sel){fb.className='fb show info';fb.textContent='Choisis une réponse d\'abord.';return;}
+  const ok=sel.value===good;
+  fb.className='fb show '+(ok?'ok':'ko');
+  fb.textContent=ok?'✅ '+okMsg:'❌ '+koMsg;
+}
+
+/* ---------- Happy Gifts ---------- */
+function checkHG(){
+  const good=['pichon','lalande','ozprod'];
+  const sel=[...document.querySelectorAll('#hg input:checked')].map(x=>x.value);
+  const fb=document.getElementById('fb-hg');
+  const ok=sel.length===good.length && good.every(g=>sel.includes(g));
+  if(ok){fb.className='fb show ok';fb.textContent='✅ Parfait : Pichon, Lalande et Ozprod respectent les 3 règles. C\'est exactement ce que fait un commercial avant un salon : trier son fichier clients.';}
+  else{
+    const wrong=sel.filter(s=>!good.includes(s)).length, missing=good.filter(g=>!sel.includes(g)).length;
+    fb.className='fb show ko';
+    fb.textContent=`❌ Pas encore. ${wrong?wrong+' client(s) coché(s) en trop. ':''}${missing?missing+' client(s) oublié(s). ':''}Vérifie les 3 règles une par une pour chaque ligne.`;
+  }
+}
+
+/* ---------- flyer ---------- */
+function checkFlyer(){
+  const good=['imprimeur','voie','francais','sante'];
+  const sel=[...document.querySelectorAll('#flyer input:checked')].map(x=>x.value);
+  const fb=document.getElementById('fb-flyer');
+  const ok=sel.length===good.length && good.every(g=>sel.includes(g));
+  fb.className='fb show '+(ok?'ok':'ko');
+  fb.textContent=ok?'✅ Oui : imprimeur, « ne pas jeter sur la voie publique », texte en français et, comme ce sont des biscuits, une phrase santé. Le prix et la photo ne sont pas obligatoires.'
+                   :'❌ Il en faut 4. Indice : la photo et les prix sont libres, tout le reste est imposé (le message santé, parce qu\'on parle de nourriture).';
+}
+
+/* ---------- profil ---------- */
+const quiz=[
+  {q:"Tu préfères…", a:"un lieu fixe que tu connais bien", b:"bouger, changer d'endroit"},
+  {q:"Ce qui te plaît le plus…", a:"ranger, organiser, que tout soit beau", b:"convaincre quelqu'un, négocier"},
+  {q:"Au téléphone avec un inconnu…", a:"bof, je préfère quand on vient me voir", b:"ça ne me dérange pas"},
+  {q:"Ton truc…", a:"aider quelqu'un qui hésite devant un rayon", b:"atteindre un objectif chiffré"}
+];
+const qz=document.getElementById('quiz');
+quiz.forEach((it,i)=>{
+  const c=document.createElement('div'); c.className='card';
+  c.innerHTML=`<b>${it.q}</b><div class="opts">
+    <label><input type="radio" name="p${i}" value="a"> ${it.a}</label>
+    <label><input type="radio" name="p${i}" value="b"> ${it.b}</label></div>`;
+  qz.appendChild(c);
+});
+function profil(){
+  let a=0,b=0,n=0;
+  quiz.forEach((_,i)=>{const s=document.querySelector(`input[name="p${i}"]:checked`); if(s){n++; s.value==='a'?a++:b++;}});
+  const fb=document.getElementById('fb-profil'); fb.className='fb show info';
+  if(n<quiz.length){fb.textContent='Réponds aux 4 questions.';return;}
+  if(a>b) fb.innerHTML='<span class="result">Plutôt option A</span> : le travail en magasin pourrait te plaire. Piste de stage : supermarché, magasin de sport, boutique.';
+  else if(b>a) fb.innerHTML='<span class="result">Plutôt option B</span> : les métiers de commercial pourraient te plaire. Piste de stage : concession auto, agence immobilière, banque, entreprise qui vend à des pros.';
+  else fb.innerHTML='<span class="result">Les deux</span> : bonne nouvelle, la 2de pro métiers de la relation client est commune aux deux. Tu choisiras plus tard.';
+}
+
+/* ---------- stage ---------- */
+const st=document.getElementById('stages');
+for(let i=1;i<=3;i++){
+  const c=document.createElement('div'); c.className='card';
+  c.innerHTML=`<b>Entreprise ${i}</b><div class="row3" style="margin-top:8px">
+    <input type="text" id="n${i}" placeholder="nom de l'entreprise">
+    <input type="text" id="t${i}" placeholder="type (magasin, agence…)">
+    <input type="text" id="m${i}" placeholder="ce que j'y observerais">
+  </div>`;
+  st.appendChild(c);
+}
+function copyAll(){
+  let txt='Mes pistes de stage – commerce et vente\n';
+  for(let i=1;i<=3;i++){
+    txt+=`${i}. ${document.getElementById('n'+i).value} | ${document.getElementById('t'+i).value} | ${document.getElementById('m'+i).value}\n`;
+  }
+  txt+='Ma question : '+document.getElementById('qstage').value+'\n';
+  const pr=document.getElementById('fb-profil').textContent;
+  if(pr) txt+='Mon profil : '+pr+'\n';
+  const done=()=>{document.getElementById('copied').textContent='copié !';setTimeout(()=>document.getElementById('copied').textContent='',2500);};
+  try{
+    navigator.clipboard.writeText(txt).then(done).catch(()=>fallback(txt,done));
+  }catch(e){fallback(txt,done);}
+}
+function fallback(txt,done){
+  const t=document.createElement('textarea'); t.value=txt; document.body.appendChild(t); t.select();
+  try{document.execCommand('copy');done();}catch(e){document.getElementById('copied').textContent='sélectionne et copie à la main';}
+  t.remove();
+}
+</script>
+</body>
+</html>
